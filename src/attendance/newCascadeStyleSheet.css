@@ -13,7 +13,7 @@ and open the template in the editor.
     -fx-color: blue;
     -fx-font: sans-serif;
     -fx-font-size: 24;
-    -fx-text-alignment: center;
+    -fx-alignment: center;
     -fx-background-image: 
 }
 
@@ -41,24 +41,47 @@ and open the template in the editor.
 #logo {
         -fx-background-image: 
     -fx-background-color: green;
-
 }
+
+
+#header2 {
+	-fx-background-color: white smoke;
+	-fx-alignment: center;
+    	-fx-font: sans-serif;
+  	-fx-font-size: 22;
+}
+
 
 .labelh1 {
-    -fx-background-color: white
-  
+  	-fx-background-color: white
+ }
 
+
+.header2 {
+   	-fx-background-color: white
+ 
 }
+
 
 .label: hover{
         -fx-background-color: red
-
-    
 }
+
 
 .button: hover{
-        -fx-background-color: whitesmoke
-       
-
-    
+        -fx-background-color: whitesmoke 
 }
+
+
+.coursebtn {
+	-fx-background-color: white; 
+ 	-fx-border: none;
+  	-fx-color: white;
+	-fx-padding: 15px 32px;
+ 	-fx-  text-align: center;
+ -fx-  text-decoration: none;
+ -fx-  display: inline-block;
+  -fx- font-size: 16px;
+
+}
+
