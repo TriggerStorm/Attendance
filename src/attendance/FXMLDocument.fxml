@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: whitesmoke;" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+      <VBox prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <AnchorPane prefHeight="30.0" prefWidth="700.0">
+               <children>
+                    <Label fx:id="label1" minHeight="16" minWidth="69" text="DATE:" AnchorPane.leftAnchor="50.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="login" layoutX="572.0" layoutY="2.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="75.0" text="Log In" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="2.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="header" prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="501.0" text="Student Attendance" textAlignment="RIGHT">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="96.0" prefWidth="700.0" />
+            <AnchorPane fx:id="body1" prefHeight="414.0" prefWidth="700.0" styleClass="label1">
+               <children>
+                  <HBox layoutX="97.0" layoutY="152.0" prefHeight="100.0" prefWidth="200.0" />
+                  <HBox layoutX="81.0" layoutY="38.0" prefHeight="420.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <SplitPane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="40.0" prefWidth="700.0">
+               <children>
+                  <Label text="Label" />
+                    <Button fx:id="button" layoutX="252.0" layoutY="9.0" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="64.0" prefWidth="146.0" text="Please Don't Click Me!" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>
