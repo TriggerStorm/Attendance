@@ -12,7 +12,7 @@ and open the template in the editor.
     -fx-background-color: #EEEEEEE;
     -fx-color: blue;
     -fx-font: sans-serif;
-    -fx-font-size: 24;
+    -fx-font-size: 30;
     -fx-alignment: center;
     -fx-background-image: 
 }
@@ -36,6 +36,14 @@ and open the template in the editor.
 }
 
 
+#textsm1 {
+	-fx-background-color: grey; 
+    	-fx-font: sans-serif;
+    	-fx-font-size: 9;
+    	-fx-alignment: center;
+}
+
+
 #title{
     	-fx-background-color: #EEEEEE;
     	-fx-color: blue;
@@ -53,7 +61,8 @@ and open the template in the editor.
 
 #header2 {
 	-fx-background-color: white smoke;
-	-fx-alignment: center;
+	-fx-alignment:center;
+ 	-fx-text-align:center;
     	-fx-font: sans-serif;
   	-fx-font-size: 22;
 }
@@ -84,7 +93,6 @@ and open the template in the editor.
 	-fx-background-color: white; 
  	-fx-border: none;
 //	-fx-{border-radius: 12px;}
-
   	-fx-color: white;
 	-fx-padding: 15px 32px;
  	-fx-text-align: center;
