@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: whitesmoke;" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: whitesmoke;" stylesheets="@attendance.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
     <children>
       <VBox prefHeight="700.0" prefWidth="700.0">
          <children>
@@ -77,7 +77,10 @@
                      </font>
                   </Label>
                   <Button layoutX="383.0" layoutY="34.0" mnemonicParsing="false" text="Submit" />
-                  <TextField layoutX="279.0" layoutY="69.0" prefHeight="17.0" prefWidth="396.0" text="Enter code to submit attendance" />
+                  <TextField fx:id="message" layoutX="279.0" layoutY="61.0" prefHeight="14.0" prefWidth="396.0" style="-fx-background-color: whitesmoke;" text="Enter code to submit attendance">
+                     <font>
+                        <Font size="10.0" />
+                     </font></TextField>
                </children></AnchorPane>
             <AnchorPane fx:id="body1" prefHeight="429.0" prefWidth="700.0" styleClass="label1">
                <children>
