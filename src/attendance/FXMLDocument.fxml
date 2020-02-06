@@ -36,16 +36,17 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="header" prefHeight="50.0" prefWidth="700.0">
+            <AnchorPane fx:id="header" prefHeight="50.0" prefWidth="700.0" styleClass="top-header">
                <children>
-                  <HBox prefHeight="50.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <HBox prefHeight="50.0" prefWidth="700.0" styleClass="top-header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
+                        <Pane prefHeight="50.0" prefWidth="100.0" />
                         <ImageView>
                            <image>
                               <Image url="@images/EASVlogo.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" text="Student Attendance" textAlignment="RIGHT">
+                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" styleClass="space1" text="Student Attendance" textAlignment="RIGHT">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -60,8 +61,8 @@
                      <children>
                         <Pane prefHeight="100.0" prefWidth="162.0">
                            <children>
-                              <Label layoutX="28.0" layoutY="32.0" prefHeight="18.0" prefWidth="79.0" text="Wednesday" />
-                              <Label layoutX="34.0" layoutY="50.0" prefHeight="16.0" prefWidth="68.0" text="24th Feb" />
+                              <Label fx:id="day" layoutX="28.0" layoutY="32.0" prefHeight="18.0" prefWidth="79.0" text="Wednesday" />
+                              <Label fx:id="date" layoutX="34.0" layoutY="50.0" prefHeight="16.0" prefWidth="68.0" text="24th Feb" />
                            </children>
                         </Pane>
                      </children>
@@ -71,7 +72,7 @@
                         <TextField layoutX="2.0" layoutY="21.0" prefHeight="18.0" prefWidth="91.0" promptText="Enter Code" />
                      </children>
                   </Pane>
-                  <Label layoutX="193.0" layoutY="15.0" prefHeight="67.0" prefWidth="79.0" styleClass="header2" text="SCO" textAlignment="CENTER">
+                  <Label layoutX="193.0" layoutY="15.0" prefHeight="67.0" prefWidth="79.0" styleClass="h2" text="SCO" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -91,7 +92,7 @@
                            <items>
                               <VBox prefHeight="471.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="header2" prefHeight="30.0" prefWidth="420.0" styleClass="header2" text="Courses" />
+                                    <Label fx:id="header2" prefHeight="30.0" prefWidth="420.0" styleClass="h2" text="Courses" />
                                     <Pane prefHeight="100.0" prefWidth="200.0">
                                        <children>
                                           <Button layoutX="23.0" layoutY="19.0" mnemonicParsing="false" styleClass="coursebtn" text="SCO" />
@@ -119,7 +120,16 @@
                         <Pane prefHeight="429.0" prefWidth="13.0" />
                         <Pane prefHeight="429.0" prefWidth="554.0">
                            <children>
-                              <VBox prefHeight="429.0" prefWidth="554.0" />
+                              <VBox prefHeight="429.0" prefWidth="554.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane prefHeight="30.0" prefWidth="141.0" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="30.0" prefWidth="554.0" />
+                                 </children></VBox>
                            </children>
                         </Pane>
                      </children>
