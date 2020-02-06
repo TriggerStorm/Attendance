@@ -34,7 +34,7 @@ and open the template in the editor.
 
 
 .button: hover{
-        -fx-background-color: yellow; 
+        -fx-background-color: bright white; 
 }
 
 
@@ -55,8 +55,13 @@ and open the template in the editor.
 
 .space1 {
 	-fx-background-color: #EEEEEEE; 
-
 }
+
+
+.tabs {
+	-fx-background-color: red; 
+}
+
 
 #header1 {
     -fx-background-color: #EEEEEEE;
@@ -109,7 +114,7 @@ and open the template in the editor.
 
 
 #logo {
-        -fx-background-image: 
+	-fx-background-image: 
     	-fx-background-color: green;
 }
 

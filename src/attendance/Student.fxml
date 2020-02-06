@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -69,12 +77,12 @@
                      </font>
                   </Label>
                   <Button layoutX="383.0" layoutY="34.0" mnemonicParsing="false" text="Submit" />
-                  <TextField fx:id="message" layoutX="34.0" layoutY="36.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm1" text="To record attendance for">
+                  <TextField fx:id="message" layoutX="34.0" layoutY="36.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm2" text="To record attendance for">
                      <font>
                         <Font size="10.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="555.0" layoutY="3.0" prefHeight="23.0" prefWidth="91.0" styleClass="textsm2" text="Attendance" />
+                  <TextField layoutX="544.0" layoutY="3.0" prefHeight="16.0" prefWidth="114.0" styleClass="textsm2" text="Attendance Rate" />
                   <TextField fx:id="attendance" layoutX="534.0" layoutY="20.0" prefHeight="50.0" prefWidth="134.0" text="100%" />
                </children></AnchorPane>
             <AnchorPane fx:id="body1" prefHeight="429.0" prefWidth="700.0" styleClass="label1">
@@ -111,18 +119,50 @@
                               </VBox>
                            </items>
                         </SplitPane>
-                        <Pane prefHeight="429.0" prefWidth="13.0" />
+                        <Pane prefHeight="429.0" prefWidth="13.0" styleClass="space1" />
                         <Pane prefHeight="429.0" prefWidth="554.0">
                            <children>
-                              <VBox prefHeight="429.0" prefWidth="554.0">
-                                 <children>
-                                    <HBox prefHeight="30.0" prefWidth="200.0">
-                                       <children>
-                                          <Pane prefHeight="30.0" prefWidth="141.0" />
-                                       </children>
-                                    </HBox>
-                                    <Pane prefHeight="30.0" prefWidth="554.0" />
-                                 </children></VBox>
+                              <TabPane prefHeight="427.0" prefWidth="554.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Attendance">
+                                       <content>
+                                          <TableView prefHeight="200.0" prefWidth="200.0">
+                                            <columns>
+                                                <TableColumn prefWidth="75.0" />
+                                              <TableColumn prefWidth="75.0" text="Monday" />
+                                              <TableColumn prefWidth="75.0" text="Tuesday" />
+                                                <TableColumn prefWidth="75.0" text="Wednesday" />
+                                                <TableColumn prefWidth="75.0" text="Thursday" />
+                                                <TableColumn prefWidth="75.0" text="Friday" />
+                                            </columns>
+                                          </TableView>
+                                       </content></Tab>
+                                    <Tab text="Graph">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BarChart>
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                      </content>
+                                    </Tab>
+                                  <Tab text="Pie Chart">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <PieChart prefHeight="394.0" prefWidth="554.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
                            </children>
                         </Pane>
                      </children>
