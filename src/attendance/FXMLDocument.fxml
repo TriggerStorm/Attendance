@@ -34,19 +34,20 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="date" layoutX="264.0" layoutY="7.0" prefHeight="18.0" prefWidth="182.0" styleClass="textsm2" text="Wednesday 24th February" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="header" prefHeight="50.0" prefWidth="700.0" styleClass="top-header">
                <children>
-                  <HBox prefHeight="50.0" prefWidth="700.0" styleClass="top-header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <HBox prefHeight="50.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Pane prefHeight="50.0" prefWidth="100.0" />
+                        <Pane prefHeight="50.0" prefWidth="50.0" />
                         <ImageView>
                            <image>
                               <Image url="@images/EASVlogo.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" styleClass="space1" text="Student Attendance" textAlignment="RIGHT">
+                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" text="Student Attendance" textAlignment="RIGHT">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -55,33 +56,26 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="96.0" prefWidth="700.0">
+            <AnchorPane prefHeight="90.0" prefWidth="700.0">
                <children>
-                  <HBox layoutY="-2.0" prefHeight="100.0" prefWidth="135.0">
-                     <children>
-                        <Pane prefHeight="100.0" prefWidth="162.0">
-                           <children>
-                              <Label fx:id="day" layoutX="28.0" layoutY="32.0" prefHeight="18.0" prefWidth="79.0" text="Wednesday" />
-                              <Label fx:id="date" layoutX="34.0" layoutY="50.0" prefHeight="16.0" prefWidth="68.0" text="24th Feb" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </HBox>
-                  <Pane layoutX="279.0" layoutY="14.0" prefHeight="67.0" prefWidth="95.0">
+                  <Pane layoutX="279.0" layoutY="14.0" prefHeight="67.0" prefWidth="95.0" AnchorPane.leftAnchor="279.0">
                      <children>
                         <TextField layoutX="2.0" layoutY="21.0" prefHeight="18.0" prefWidth="91.0" promptText="Enter Code" />
                      </children>
                   </Pane>
-                  <Label layoutX="193.0" layoutY="15.0" prefHeight="67.0" prefWidth="79.0" styleClass="h2" text="SCO" textAlignment="CENTER">
+                  <Label layoutX="193.0" layoutY="12.0" prefHeight="67.0" prefWidth="79.0" styleClass="h2" text="SCO" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
                   <Button layoutX="383.0" layoutY="34.0" mnemonicParsing="false" text="Submit" />
-                  <TextField fx:id="message" layoutX="279.0" layoutY="61.0" prefHeight="14.0" prefWidth="396.0" style="-fx-background-color: whitesmoke;" text="Enter code to submit attendance">
+                  <TextField fx:id="message" layoutX="34.0" layoutY="36.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm1" text="To record attendance for">
                      <font>
                         <Font size="10.0" />
-                     </font></TextField>
+                     </font>
+                  </TextField>
+                  <TextField layoutX="555.0" layoutY="3.0" prefHeight="23.0" prefWidth="91.0" styleClass="textsm2" text="Attendance" />
+                  <TextField fx:id="attendance" layoutX="534.0" layoutY="20.0" prefHeight="50.0" prefWidth="134.0" text="100%" />
                </children></AnchorPane>
             <AnchorPane fx:id="body1" prefHeight="429.0" prefWidth="700.0" styleClass="label1">
                <children>
@@ -125,7 +119,6 @@
                                     <HBox prefHeight="30.0" prefWidth="200.0">
                                        <children>
                                           <Pane prefHeight="30.0" prefWidth="141.0" />
-                                          <TextField />
                                        </children>
                                     </HBox>
                                     <Pane prefHeight="30.0" prefWidth="554.0" />

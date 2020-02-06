@@ -9,9 +9,9 @@ and open the template in the editor.
 */
 
 
-.top-header { -fx-color: #eee; }
-.background { -fx-color: #f4f4f4; }
-.menu { -fx-color: #f5f5f5; }
+.top-header { -fx-background-color: #eee; }
+.background { -fx-background-color: #f4f4f4; }
+.menu { -fx-background-color: #f5f5f5; }
 
 
 .banner1 {
@@ -76,10 +76,19 @@ and open the template in the editor.
 }
 
 
-#textsm1 {
-	-fx-background-color: grey; 
+.textsm1 {
+	-fx-background-color: f4f4f4; 
     	-fx-font: sans-serif;
-    	-fx-font-size: 9;
+    	-fx-font-size: 12;
+    	-fx-alignment: center;
+}
+
+
+.textsm2 {
+	-fx-background-color: f4f4f4; 
+    	-fx-font: sans-serif;
+    	-fx-font-size: 12;
+	-fx-text-fill: grey;
     	-fx-alignment: center;
 }
 
@@ -88,7 +97,7 @@ and open the template in the editor.
     	-fx-background-color: #EEEEEE;
     	-fx-color: blue;
     	-fx-font: sans-serif;
-    	-fx-font-size: 24;
+    	-fx-font-size: 30;
     	-fx-text-alignment: center;
     	-fx-background-image: 
 }
@@ -104,4 +113,11 @@ and open the template in the editor.
     	-fx-background-color: green;
 }
 
+
+#attendance {
+    	-fx-background-color: #f5f5f5;
+    	-fx-font: sans-serif;
+	-fx-font-size: 36;
+	-fx-text-fill: light green;
+}
 
