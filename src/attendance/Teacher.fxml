@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: whitesmoke;" stylesheets="@attendance.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: whitesmoke;" stylesheets="@attendance.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendance.FXMLDocumentController">
     <children>
       <VBox prefHeight="700.0" prefWidth="700.0">
          <children>
@@ -55,7 +55,7 @@
                               <Image url="@images/EASVlogo.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" text="Student Attendance" textAlignment="RIGHT">
+                        <Label fx:id="title" contentDisplay="CENTER" prefHeight="50.0" prefWidth="595.0" text="  Student Attendance" textAlignment="RIGHT">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -68,22 +68,22 @@
                <children>
                   <Pane layoutX="279.0" layoutY="14.0" prefHeight="67.0" prefWidth="95.0" AnchorPane.leftAnchor="279.0">
                      <children>
-                        <TextField layoutX="2.0" layoutY="21.0" prefHeight="18.0" prefWidth="91.0" promptText="Enter Code" />
+                        <Button layoutX="14.0" layoutY="9.0" mnemonicParsing="false" styleClass="coursebtn" text="SDE" />
                      </children>
                   </Pane>
-                  <Label layoutX="193.0" layoutY="12.0" prefHeight="67.0" prefWidth="79.0" styleClass="h2" text="SCO" textAlignment="CENTER">
+                  <Button layoutX="171.0" layoutY="23.0" mnemonicParsing="false" styleClass="coursebtn" text="SCO" />
+                  <Button layoutX="551.0" layoutY="23.0" mnemonicParsing="false" styleClass="coursebtn" text="ITO" />
+                  <Button layoutX="412.0" layoutY="23.0" mnemonicParsing="false" styleClass="coursebtn" text="DB/OS" />
+                  <Label layoutX="47.0" layoutY="64.0" text="MockUser" textFill="#1c08f8">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="383.0" layoutY="34.0" mnemonicParsing="false" text="Submit" />
-                  <TextField fx:id="message" layoutX="34.0" layoutY="36.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm2" text="To record attendance for">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </TextField>
-                  <TextField layoutX="544.0" layoutY="3.0" prefHeight="16.0" prefWidth="114.0" styleClass="textsm2" text="Attendance Rate" />
-                  <TextField fx:id="attendance" layoutX="534.0" layoutY="20.0" prefHeight="50.0" prefWidth="134.0" text="100%" />
+                  <ImageView layoutX="56.0" layoutY="14.0">
+                     <image>
+                        <Image url="@images/Untitled-1.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             <AnchorPane fx:id="body1" prefHeight="429.0" prefWidth="700.0" styleClass="label1">
                <children>
@@ -94,25 +94,37 @@
                            <items>
                               <VBox prefHeight="471.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="header2" prefHeight="30.0" prefWidth="420.0" styleClass="h2" text="Courses" />
+                                    <Label fx:id="header2" prefHeight="30.0" prefWidth="420.0" styleClass="h2" text="Today" />
                                     <Pane prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <Button layoutX="23.0" layoutY="19.0" mnemonicParsing="false" styleClass="coursebtn" text="SCO" />
+                                          <TextField fx:id="message" layoutY="50.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm2" text="attendance for">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="message1" layoutY="32.0" prefHeight="23.0" prefWidth="159.0" style="-fx-background-color: whitesmoke;" styleClass="textsm2" text="To record">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </TextField>
                                        </children>
                                     </Pane>
                                     <Pane prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <Button layoutX="23.0" layoutY="19.0" mnemonicParsing="false" styleClass="coursebtn" text="SDE" />
+                                          <TextField layoutX="34.0" layoutY="50.0" prefHeight="18.0" prefWidth="91.0" promptText="Enter Code" />
+                                          <Label layoutX="40.0" layoutY="-26.0" prefHeight="67.0" prefWidth="79.0" styleClass="h2" text="SCO" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="49.0" layoutY="87.0" mnemonicParsing="false" text="Submit" />
                                        </children>
                                     </Pane>
-                                    <Pane prefHeight="67.0" prefWidth="105.0">
-                                       <children>
-                                          <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" styleClass="coursebtn" text="DB/OS" />
-                                       </children>
-                                    </Pane>
+                                    <Pane prefHeight="67.0" prefWidth="105.0" />
                                     <Pane prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <Button layoutX="26.0" layoutY="27.0" mnemonicParsing="false" styleClass="coursebtn" text="ITO" />
+                                          <TextField fx:id="attendance" layoutX="9.0" layoutY="52.0" prefHeight="50.0" prefWidth="134.0" text="100%" />
+                                          <TextField layoutX="19.0" layoutY="34.0" prefHeight="23.0" prefWidth="114.0" styleClass="textsm2" text="Attendance Rate" />
                                        </children>
                                     </Pane>
                                  </children>
